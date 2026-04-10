@@ -1,5 +1,7 @@
 package med.voll.api.address;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,6 +14,7 @@ import lombok.NoArgsConstructor;
 public class Address {
     private String street;
     private String neighborhood;
+    @Column(name = "zipcode")
     private String zipCode;
     private String city;
     private String state;

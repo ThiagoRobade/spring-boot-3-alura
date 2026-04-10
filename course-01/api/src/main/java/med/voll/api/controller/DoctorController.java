@@ -1,5 +1,6 @@
 package med.voll.api.controller;
 
+import jakarta.transaction.Transactional;
 import med.voll.api.doctor.Doctor;
 import med.voll.api.doctor.DoctorRepository;
 import med.voll.api.doctor.MedicalRegistrationData;
@@ -17,6 +18,7 @@ public class DoctorController {
     private DoctorRepository repository;
 
     @PostMapping
+    @Transactional
     public void register(@RequestBody MedicalRegistrationData data) {
         repository.save(new Doctor(data));
     }
