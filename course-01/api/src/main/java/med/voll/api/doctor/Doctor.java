@@ -28,4 +28,11 @@ public class Doctor {
     private Address address;
 
 
+    public Doctor(MedicalRegistrationData data) {
+        this.name = data.name();
+        this.email = data.email();
+        this.crm = data.crm();
+        this.specialty = data.specialty();
+        this.address = new Address(data.address());
+    }
 }

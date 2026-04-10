@@ -17,4 +17,14 @@ public class Address {
     private String state;
     private String number;
     private String complement;
+
+    public Address(AddressData data) {
+        this.street = data.street();
+        this.neighborhood = data.neighborhood();
+        this.zipCode = data.zipCode();
+        this.city = data.city();
+        this.state = data.state();
+        this.number = data.number();
+        this.complement = data.complement();
+    }
 }
